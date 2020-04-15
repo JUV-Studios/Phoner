@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Home - Phoner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="thumbnail.png" type="image/png" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Header/Logo Title */
+    .header {
+      background: black;
+      /* Position and center the image to scale nicely on all screens */
+      background-position: center;
+      background-repeat: no-repeat;
+      /*background-size: cover;*/
+      position: relative;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://bit.ly/2TPZDvd");
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="home.html" class="active" title="Home"><i class="ms-Icon ms-Icon--Home" aria-hidden="true"></i> Home</a>
+    <a href="articles.html" title="Articles">Articles</a>
+    <a href="specs.html" title="Specs">Specs</a>
+    <a href="about.html" title="About">About</a>
+    <a href="http://bit.ly/2QbS3bN" title="Feedback" target="_blank">Feedback</a>
+    <a href="https://www.youtube.com/channel/UCCgDUPx_XgBfgBx-If1uk1g" target="_blank" title="Our YouTube Channel">JUV
+      Studios</a>
+  </div>
+  <div class="header">
+    <div>
+      <h1>Home</h1>
+      <p>Welcome to Phoner!</p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="row">
+      <div class="column">
+        <p>Hello! Using Phoner, you can easily decide which phone to buy
+          and get tips on what specs to consider based on your workflow and your usecase.</p>
+        <p>You can also understand the features and functionality of
+          different mobile operating systems. </p>
+        <p>You can also learn some common mobile phone tricks and read
+          latest news on smartphones.</p>
+        <div class="column3">
+          <div class="row">
+            <div class="column">
+              <center><br><img src="https://elandroidelibre.elespanol.com/wp-content/uploads/2018/09/realme-2-pro-4.jpg"
+                  width="50%" />
+                <h3>Realme 2 Pro</h3>
+                <button class="btn" title="View specs" style="width: 100%;" onclick="OpenFirstPhone()">View specs</button><br><br>
+              </center>
+            </div>
+            <div class="column">
+              <center><br><img src="http://bit.ly/2TSo4It"
+                width="93.5%"/>
+              <h3>Oppo Reno 3 Pro</h3>
+              <button class="btn" title="View specs" style="width: 100%;" onclick="window">View specs</button><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <img src="http://bit.ly/2U4gRUz" width="100%" height="500" style="margin-top: 10px;" />
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<script>
+  function OpenFirstPhone()
+  {
+    window.location.href = 'specs.html#Realme6Pro';
+  }
+  function OpenSecondPhone()
+  {
+    window.location.href = 'specs.html#OppoReno3Pro';
+  }
+</script>
+</html>

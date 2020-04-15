@@ -1,0 +1,279 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Articles - Phoner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="thumbnail.png" type="image/png" />
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <div class="busy-loader" id="loader">
+        <div class="w-ball-wrapper ball-1">
+            <div class="w-ball">
+            </div>
+        </div>
+        <div class="w-ball-wrapper ball-2">
+            <div class="w-ball">
+            </div>
+        </div>
+        <div class="w-ball-wrapper ball-3">
+            <div class="w-ball">
+            </div>
+        </div>
+        <div class="w-ball-wrapper ball-4">
+            <div class="w-ball">
+            </div>
+        </div>
+        <div class="w-ball-wrapper ball-5">
+            <div class=" w-ball">
+            </div>
+        </div>
+    </div>
+    <div class="topnav" id="myTopnav">
+        <a href="home.html" title="Home"><i class="ms-Icon ms-Icon--Home" aria-hidden="true"></i> Home</a>
+        <a href="things.html" title="Articles" class="active">Articles</a>
+        <a href="specs.html" title="Specs">Specs</a>
+        <a href="about.html" title="About">About</a>
+        <a href="http://bit.ly/2QbS3bN" target="_blank" title="Feedback">Feedback</a>
+        <a href="https://www.youtube.com/channel/UCCgDUPx_XgBfgBx-If1uk1g" target="_blank"
+            title="Our YouTube Channel">JUV
+            Studios</a>
+    </div>
+    <div id="elements" style="display: none;">
+        <div class="header">
+            <h1>Articles</h1>
+            <p>Read tips, latest phone news, comparisons and more!</p>
+        </div>
+        <div class="tab">
+            <input type="search" class="searchbox" placeholder="Search for articles" title="Search for articles"
+                onkeyup="loadSearch()" onsearch="loadSearch()" />
+            <button class="tablinks" onclick="openPage(event, 'TipsForChoosingAPhone')" id="defaultOpen">Tips for
+                choosing a
+                phone</button>
+            <button class="tablinks" onclick="openPage(event, 'AndroidvsiOS')">Android vs iOS</button>
+            <hr style="width: 100%; display: none;" id="Seperator" />
+        </div>
+        <div class="tabcontent" id="TipsForChoosingAPhone">
+            <h1>Tips for choosing a phone</h1>
+            <p>Difficulty choosing the right phone? With the help of these
+                tips, you can easily choose the phone that fit your needs.</p>
+            <h4>The Display</h4>
+            <p>If you're like most of us, you're going to spend hours each day staring at your smartphone screen.
+                Make
+                sure you're buying one that's bright enough to see in outdoors, and sharp enough where text doesn't
+                look
+                blurry while you're surfing the web. If you're buying a phone with a large screen, don't go under a
+                resolution of 1920 x 1080 and, if you can splurge, look for the sharper 2560 x 1440 Quad HD
+                resolutions.
+                Consider the screen size, too. Can you easily reach across it? Do you want a larger screen for
+                movies or
+                a smaller one that's easier to hold and less likely to drop out of your hands?</p>
+            <h4>The Battery</h4>
+            <p>Read reviews or talk to people who already own the phone you're interested in buying. You want
+                one that's
+                going to last all day, if possible. The biggest complaint I hear from friends and family is that
+                their
+                smartphones are "always dead." If you're in this bunch, consider a smartphone with a fast
+                charging
+                battery. Most Android smartphone makers include the special chargers that can juice up a battery
+                to at
+                least a half charge in just minutes. Or if you own an iPhone, consider buying an iPad charger to
+                get
+                more juice.</p>
+
+            <h4>The Storage</h4>
+            <p>I know plenty of folks try to save money by buying cheaper phone but often they ship without
+                much storage
+                on board. I recommend buying smartphone with at least 64GB of storage, or more if you plan
+                to download
+                music and movies. Apps are much bigger these days, and pictures can take a lot of space on
+                your device
+                if you're not storing them in the cloud (Apple Photos, Google Photos, OneDrive etc...) Some
+                Android
+                smartphones also offer microSD card slots that lets you to boost the storage space by
+                connecting a
+                microSD.</p>
+
+            <h4>The Operating System</h4>
+            </hr>
+            <p>Each Operating System has its own pros and cons. Therefore,
+                it is very important to choose the right one to get the best experience. Look for the
+                <a class="ms-Link" onclick="GoToAndroidVsiOS()">Android vs iOS Page</a> on our
+                website for more
+                details.</p>
+            <hr>
+            <h2>References and links</h2>
+            <ul>
+                <li> <a href="https://www.theverge.com/2019/3/14/18265265/samsung-all-display-phone-under-screen-selfie-camera-no-cutout"
+                        class="ms-link" target="_blank">Samsung is working on ‘perfect full-screen’ devices with
+                        selfie cameras under the display - The Verge</a></li>
+                <li><a href="http://www.iphonehacks.com/2014/01/how-much-storage-space-16gb-smartphone.html"
+                        class="ms-Link" target="_blank">How much storage space does your 16GB smartphone really
+                        have? -
+                        iPhone Hacks</a></li>
+                <li> <a href="https://wccftech.com/iphone-android-flagship-battery-life-getting-worse/" class="ms-Link"
+                        target="_blank">iPhone Battery Life Is Getting Worse With Each Successive
+                        Generation – Android
+                        Flagships Suffering the Same, According to Tests - Wccftech</a></li>
+
+            </ul>
+        </div>
+        <div class="tabcontent" id="AndroidvsiOS">
+            <h1>Android vs iOS</h1>
+            <p>Any device without an operating system is useless, Phones too!
+                Today, the two major mobile operating systems are: Android and iOS. Each of these platforms have their
+                own
+                advantages and
+                disadvantages. Therefore you'll need to decide which one you want based on your needs. This article will
+                help
+                you decide the platform of the phone you want to buy.</p>
+            <div>
+                <div id="android">
+                    <h2>Android</h2>
+                    <p>Android is a mobile operating system primarily designed for
+                        smartphones and tablets. It was originally developed by Android Inc and then the company was
+                        acquired by
+                        Google. It is free and open source, so that's why many phone manufacturers include it on thier
+                        phones. About
+                        76.23% of all phones in the world run on the Android operating system.</p>
+                    <a href="https://www.android.com/" class="ms-Link" aria-label="Android Official Website"
+                        target="_blank">Android
+                        Official
+                        Website</a>
+                    <i><b><u>
+                                <h3>Pros</h3>
+                            </u></b></i>
+                    <h4>Customization</h4>
+                    <p>Android is very customizable. In Android, if you do
+                        not like the look of the home screen you can install an additional launcher.</p>
+                    <h4>File Management</h4>
+                    <p>In Android, you have access to the entire file system. This
+                        means you can save a file and access it from any app. Also, you can connect your phone to a PC
+                        and
+                        edit all
+                        your files.</p>
+                    <h4>Default Apps</h4>
+                    <p>In Android, you can choose the default apps like browser or
+                        music player.</p>
+                    <h4>App download location</h4>
+                    <p>In Android, you can actually install apps that are not
+                        available from Play Store. This feature is disabled by default for security but you can enable
+                        if
+                        you want
+                        but,
+                        you should be careful and only install apps from a trusted location.</p>
+                    <h4>More device options</h4>
+                    <p>Android runs on lots of devices, so you have the option to
+                        get
+                        a phone that's right for you and that you can afford.</p>
+                    <i><b><u>
+                                <h3>Cons</h3>
+                            </u></b></i>
+                    <h4>Security</h4>
+                    <p>While most of us don't get malware on our phones, remember
+                        that you can. As Android let's you to download apps outside the Play Store, you can install an
+                        app
+                        that
+                        could
+                        be malware. Also, most Phone manufacturers makes a lot of customization in the version of
+                        Android
+                        that is
+                        shipped
+                        on their phones. That means you won't get updates immediately when it is released because your
+                        manufacturer
+                        needs
+                        to
+                        update thier version of Android. However many does not seem to care. This is why we still see
+                        phones
+                        still
+                        running Android 6 even though Android
+                        10 has been released.</p>
+                    <h4>Bloatwares</h4>
+                    <p>Most Android phones comes with unwanted apps preinstalled.
+                        These apps slow down your phone by running in the background and they show you targeted ads.
+                        Manufacturers do
+                        this because they get money.</p>
+                    <h4 style="font-family:'Open Sans', sans-serif;">Accessibility</h4>
+                    <p>Android does not have a lot of Accessibility features. This
+                        makes Android hard to be used by a disabled person.</p>
+                </div>
+                <hr>
+                <div id="iOS">
+                    <h2>iOS</h2>
+                    <p>iOS is a mobile operating system designed by Apple and
+                        available exclusively for iPhone, iPod Touch and previously for iPad (Now iPadOS). About 22.17%
+                        of
+                        all
+                        phones in the world are iPhones.</p>
+                    <a href="https://www.apple.com/ios/ios-13/" class="ms-Link" aria-label="iOS Official Website"
+                        target="_blank">iOS Official
+                        Website</a>
+                    <i><b><u>
+                                <h3>Pros</h3>
+                            </u></b></i>
+                    <h4>Built-in Barcode & QR code Scanner</h4>
+                    <p>iOS has a built-in barcode scanner and QR code reader while on Android you'll install one.
+                        <h4>Security</h4>
+                        <p>iOS is more secure than Android OS when it come to
+                            protecting your data because Google is a advertising company who don't respect your privacy.
+                            It
+                            is locked
+                            from installing apps only from the App Store and they're verified by Apple so you can't
+                            download
+                            malware.
+                            iOS only runs on iPhones, so you get updates immediately when it's released.</p>
+                        <h4>Perfomance</h4>
+                        <p>iOS only runs on iPhones so it is optimized for it's
+                            hardware and you get decent perfomance even on low end models.</p>
+                        <i><b><u>
+                                    <h3>Cons<h3>
+                                </u></b></i>
+                        <h4 style="font-family:'Open Sans', sans-serif;">You can't change the default apps</h4>
+                        <p>In iOS you cannot change the default apps and they remain
+                            the Apple apps unless you jailbreak (Jaibreaking may be illegal based on your region).</p>
+                        <h4 style="font-family: 'Montserrat', sans-serif;">Less device options</h4>
+                        <p>iOS is exclusively availabe for the iPhone only, so if you
+                            want phone that has iOS, you can only go for the iPhone (which is expensive and may not suit
+                            your budget).
+                        </p>
+                        <h4 style="font-family: 'Montserrat', sans-serif;">File Management</h4>
+                        <p>In iOS, you can only view photos when you connect to a PC.
+                            To view and edit a file, you can use
+                            iTunes on Windows and earlier versions of macOS or Finder on macOS Catalina.</p>
+                        <h4 style="font-family:'Open Sans', sans-serif;">Locked to App Store</h4>
+                        <p>In iOS, you can only install apps from
+                            the App Store. To sideload apps on an iPhone, you need to jailbreak your iPhone which might
+                            be
+                            illegal
+                            based on you
+                            region.</p>
+                        <h4 style="font-family:'Open Sans', sans-serif;">No SD Card Support</h4>
+                        <p>No iPhones till this date support SD Cards. This means you
+                            can only use the built-in storage and can't extent it.</p>
+                        <h4 style="font-family:'Open Sans', sans-serif;">Language support</h4>
+                        <p>iOS supports fewer languages than Android, which makes it
+                            not friendly for everyone.</p>
+                        <hr>
+                        <h2>References and links</h2>
+                        <ul>
+                            <li> <a href="https://support.apple.com/en-us/HT208843" target="_blank">Scan a QR code with
+                                    your iPhone, iPad, or iPod touch - Apple</a>
+                            </li>
+                        </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function GoToAndroidVsiOS() {
+            window.location.hash = "#AndroidvsiOS";
+            window.location.reload();
+        }
+    </script>
+    <script src="shared.js"></script>
+</body>
+
+</html>
