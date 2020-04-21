@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-    <div class="topnav" id="myTopnav">
+    <nav>
         <a href="home.html" title="Home"><i class="ms-Icon ms-Icon--Home" aria-hidden="true"></i> Home</a>
         <a href="articles.html" title="Articles">Articles</a>
         <a href="specs.html" title="Specs" class="active">Specs</a>
@@ -53,17 +53,17 @@
         <a href="https://www.youtube.com/channel/UCCgDUPx_XgBfgBx-If1uk1g" target="_blank"
             title="Our YouTube Channel">JUV
             Studios</a>
-    </div>
+    </nav>
     <div id="elements" style="display: none;">
-        <div class="header">
+        <header>
             <h1>Specs</h1>
             <p>View and compare the specs of different phones.</p>
-        </div>
+        </header>
         <div class="tab">
             <input type="search" class="searchbox" placeholder="Search for phones" title="Search for phones"
                 onkeyup="loadSearch()" onsearch="loadSearch()" />
-            <button class="tablinks" onclick="openPage(event, 'XiaomiRedmiNote9Pro')"
-                aria-label="XiaomiRedmiNote9Pro" id="defaultOpen">Xiaomi Redmi Note 9 Pro</button>
+            <button class="tablinks" onclick="openPage(event, 'XiaomiRedmiNote9Pro')" aria-label="XiaomiRedmiNote9Pro"
+                id="defaultOpen">Xiaomi Redmi Note 9 Pro</button>
             <button class="tablinks" onclick="openPage(event, 'Realme6Pro')" aria-label="Realme6Pro">Realme 6
                 Pro</button>
             <button class="tablinks" onclick="openPage(event, 'OppoReno3Pro')" aria-label="OppoReno3Pro">Oppo Reno3
@@ -72,6 +72,9 @@
                 M31</button>
             <button class="tablinks" onclick="openPage(event, 'XiaomiPocoX2')" aria-label="XiaomiPocoX2">Xiaomi Poco
                 X2</button>
+            <button class="tablinks" onclick="openPage(event, 'SamsungGalaxyZFlip')"
+                aria-label="SamsungGalaxyZFlip">Samsung Galaxy Z Flip</button>
+            <button class="tablinks" onclick="openPage(event, 'VivoiQOO3')" aria-label="VivoiQOO3">Vivo iQOO 3</button>
             <button class="tablinks" onclick="openPage(event, 'RealmeC3')" aria-label="RealmeC3">Realme C3</button>
             <button class="tablinks" onclick="openPage(event, 'oppo')" aria-label="oppo">Oppo F15</button>
             <button class="tablinks" onclick="openPage(event, 'GalaxyA51')" aria-label="GalaxyA51">Samsung Galaxy
@@ -92,6 +95,82 @@
             <button class="tablinks" onclick="openPage(event, 'JioPhone2')" aria-label="JioPhone2">Jio Phone 2</button>
             <hr style="width: 100%; display: none;" id="Seperator" />
         </div>
+        <div class="tabcontent" id="SamsungGalaxyZFlip">
+            <div class="row">
+                <div class="column">
+                    <h1>Samsung Galaxy Z Flip</h1>
+                    <ul>
+                        <li>Announced: February 11, 2020. Launched: February 14, 2020</li>
+                        <li>RAM: 8 GB</li>
+                        <li>Processor: Qualcomm SM8150 Snapdragon 855+ (7 nm), Octa-core (1x2.95 GHz Kryo 485 & 3x2.41
+                            GHz Kryo 485 & 4x1.78 GHz Kryo 485)</li>
+                        <li>GPU: Adreno 640 (700 MHz)</li>
+                        <li>Main cameras: 12 MP, 12 MP LED flash, HDR, panorama</li>
+                        <li>Selfie cameras: 10 MP HDR</li>
+                        <li>Screen: Foldable Dynamic AMOLED capacitive touchscreen, 16M colors, 6.7 inches, 101.6 cm2
+                            (~82.5% screen-to-body ratio), 1080x2636 pixels (~425 ppi density)</li>
+                        <li>SIM: Nano-SIM, eSIM</li>
+                        <li>Speakers: 32-bit/384kHz audio, Tuned by AKG</li>
+                        <li>Battery: Non-removable Li-Po 3300 mAh battery</li>
+                        <li>Charging: Fast charging 15W, Wireless charging</li>
+                        <li>Sensors: Fingerprint (side-mounted), accelerometer, gyro, proximity, compass, barometer</li>
+                        <li>Bluetooth version: 5.0</li>
+                        <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
+                        <li>USB: 3.1, Type-C 1.0 reversible connector, USB On-The-Go</li>
+                        <li>Colour(s): Mirror Black, Mirror Purple, Mirror Gold, Thom Browne Edition</li>
+                        <li>Price in India: ₹ 1,09,999</li>
+                        <li>Price in the US: $ 1,238.50</li>
+                        <li>Price in Europe: € 1,290</li>
+                        <li>Price in the UK: $ 1,239</li>
+                    </ul>
+                    <button class="btn" title="Watch promo video" onclick="launchUri('https://youtu.be/UVxyXzaCI34')">
+                        <i class="ms-Icon ms-Icon--Video" aria-hidden="true"></i> Promo Video
+                    </button>
+                    <button class="btn" title="Buy at Amazon" onclick="launchUri('https://amzn.to/3cxJ0Ld');">
+                        <i class="ms-Icon ms-Icon--Shop" aria-hidden="true"></i> Buy at Amazon</span>
+                    </button>
+                    <button class="btn" title="Reviews" onclick="launchUri('https://cnet.co/2XTmHf2')">
+                        <i class="ms-Icon ms-Icon--FavoriteList" aria-hidden="true"></i> Reviews
+                    </button>
+                </div>
+                <div class="column">
+                    <img src="https://cnet1.cbsistatic.com/img/mOvmeW_6UE3TJPWfdk_Pbaecca4=/980x551/2020/02/14/8a62b9d1-eb46-41ad-8f00-60059344fb18/1t4a1016.jpg"
+                        style="width: 100%;" />
+                </div>
+            </div>
+        </div>
+        <div class="tabcontent" id="VivoiQOO3">
+            <div class="row">
+                <div class="column">
+                    <h1>Vivo iQOO 3</h1>
+                    <ul>
+                        <li>Announced: February 25, 2020. Launched: March 4, 2020</li>
+                        <li>RAM: 6 or 12 GB</li>
+                        <li>Processor: Qualcomm SM8250 Snapdragon 865 (7 nm+), Octa-core (1x2.84 GHz Kryo 585 & 3x2.42
+                            GHz Kryo 585 & 4x1.8 GHz Kryo 585)</li>
+                        <li>GPU: Adreno 650</li>
+                        <li>Screen: Super AMOLED capacitive touchscreen, 16M colors, 6.44 inches, 100.1 cm2 (~84.3%
+                            screen-to-body ratio), 1080x2400 pixels, 20:9 ratio (~409 ppi density)</li>
+                        <li>Battery: Non-removable Li-Po 4400 mAh battery</li>
+                        <li>Charging: Fast charging 55W, 50% in 15 min (advertised), Super Flash Charge 2.0</li>
+                        <li>Sensors: Fingerprint (under display, optical), accelerometer, gyro, proximity, compass</li>
+                        <li>Bluetooth version: 5.1</li>
+                        <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
+                        <li>Colour(s): Volcano Orange, Tornado Black, Quantum Silver</li>
+                        <li>Price in India: ₹ 36,990</li>
+                        <li>Price in the US: $ 671</li>
+                    </ul>
+                    <button class="btn" title="Reviews"
+                        onclick="launchUri('https://www.digit.in/reviews/mobile-phones/vivo-iqoo-3-5g-review-193610.html')">
+                        <i class="ms-Icon ms-Icon--FavoriteList" aria-hidden="true"></i> Reviews
+                    </button>
+                </div>
+                <div class="column">
+                    <img src="https://www.sotophone.com/images/mobile/vivo-iqoo-3-5g.jpg"
+                        style="width: 100%; height: fit-content;" />
+                </div>
+            </div>
+        </div>
         <div class="tabcontent" id="realme5i">
             <div class="row">
                 <div class="column">
@@ -104,7 +183,7 @@
                         <li>Battery: Non-removable Li-Po 5000 mAh battery</li>
                         <li>Charging: Standard charging 10W</li>
                         <li>Sensors: Fingerprint (rear-mounted), accelerometer, gyro, proximity, compass</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Blue, Green</li>
                         <li>Price in India: ₹ 10,950</li>
@@ -137,14 +216,14 @@
                         <li>Processor: Qualcomm SM7125 Snapdragon 720G (8 nm), Octa-core (2x2.3 GHz Kryo 465 Gold &
                             6x1.8 GHz Kryo 465 Silver)</li>
                         <li>GPU: Adreno 618</li>
-                        <li>Main Cameras: 48 MP, 8 MP, 5 MP, 2 MP LED flash, HDR, panorama</li>
+                        <li>Main cameras: 48 MP, 8 MP, 5 MP, 2 MP LED flash, HDR, panorama</li>
                         <li>Screen: IPS LCD capacitive touchscreen, 16M colors, 6.67 inches, 107.4 cm2 (~84.5%
                             screen-to-body ratio), 1080x2400 pixels, 20:9 ratio (~395 ppi density), 450 nits typ.
                             brightness (advertised)</li>
                         <li>Battery: Non-removable Li-Po 5020 mAh battery</li>
                         <li>Charging: Fast charging 18W</li>
                         <li>Sensors: Fingerprint (side-mounted), accelerometer, gyro, proximity, compass</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Aurora Blue, Glacier White, Interstellar Black</li>
                         <li>Price in India: ₹ 14,999</li>
@@ -173,14 +252,14 @@
                         <li>RAM: 6 GB or 8 GB</li>
                         <li>Processor: Qualcomm SM7125 Snapdragon 720G (8 nm)</li>
                         <li>GPU: Adreno 618</li>
-                        <li>Main Cameras: 64 MP, 12 MP, 8 MP, 2 MP LED flash, HDR, panorama</li>
-                        <li>Selfie Cameras: 16 MP, 8 MP HDR, panorama</li>
+                        <li>Main cameras: 64 MP, 12 MP, 8 MP, 2 MP LED flash, HDR, panorama</li>
+                        <li>Selfie cameras: 16 MP, 8 MP HDR, panorama</li>
                         <li>Screen: IPS LCD capacitive touchscreen, 16M colors, 6.6 inches, 105.2 cm2 (~84.7%
                             screen-to-body
                             ratio), 1080x2400 pixels, 20:9 ratio (~399 ppi density)</li>
                         <li>Battery: Non-removable Li-Po 4300 mAh battery</li>
                         <li>Charging: Fast charging 30W, 100% in 57 min (advertised)</li>
-                        <li>Bluetooth Version: 5.1</li>
+                        <li>Bluetooth version: 5.1</li>
                         <li>Wi-Fi: Wi-Fi 802.11 a/b/g/n/ac (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Lightning Blue, Lightning Orange</li>
                         <li>Price in India: ₹ 16,999</li>
@@ -215,6 +294,9 @@
                         <li>Operating System: KaiOS</li>
                         <li>Price in India: ₹ 2,999</li>
                     </ul>
+                    <button class="btn" title="Reviews" onclick="launchUri('https://bit.ly/34QITHS')">
+                        <i class="ms-Icon ms-Icon--FavoriteList" aria-hidden="true"></i> Reviews
+                    </button>
                 </div>
                 <div class="column">
                     <img
@@ -232,7 +314,7 @@
                         <li>Processor: Qualcomm SDM730 Snapdragon 730G (8 nm) </li>
                         <li>Screen: 6.67 Inches LCD Touchscreen display (1080x2400 resolution & 20:9 aspect ratio)</li>
                         <li>Battery: 4500mAh</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Atlantis Blue, Matrix Purple, Phoenix Red</li>
                         <li>Operation System: Android 10.0, MIUI 11</li>
@@ -264,7 +346,7 @@
                         <li>Processor: Apple A12 Bionic</li>
                         <li>Screen: 6.1 Inches LCD Touchscreen display (828x1792 resolution & 19.5:9 aspect ratio)</li>
                         <li>Battery: 2942mAh</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Black, Red, Yellow, Blue, Coral, White</li>
                         <li>Operation System: iOS 12</li>
@@ -326,7 +408,7 @@
                         <li>Processor: Qualcomm SDM855 Snapdragon 855 (7 nanometer)</li>
                         <li>Screen: 6.1 Inches AMOLED Touchscreen display (1440x3040 resolution)</li>
                         <li>Battery: 3400mAh</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Prism White, Prism Black, Prism Green, Prism Blue, Canary Yellow, Flamingo Pink,
                             Cardinal Red,
@@ -362,7 +444,7 @@
                         <li>Processor: Qualcomm MSM8998 Snapdragon 835 (10 nm)</li>
                         <li>Screen: 5.3 Inches LCD Touchscreen display (1440x2560 resolution)</li>
                         <li>Battery: 3090mAh</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Tempered Blue, Polished Blue, Steel, Polished Copper</li>
                         <li>Operating System: Android 7.0 Nougat</li>
@@ -397,7 +479,7 @@
                         <li>Processor: HiSilicon Kirin 980 (7 nm)</li>
                         <li>Screen: 6.26 Inches LCD Touchscreen display (1080x2340 resolution)</li>
                         <li>Battery: 3750mAh</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Black, Crush Blue, Midsummer Purple</li>
                         <li>Storage: 128 GB</li>
@@ -427,11 +509,11 @@
                         <li>Announced: September, 2019. Launched: October, 2019</li>
                         <li>RAM: 8 GB</li>
                         <li>Processor: Qualcomm SM8150 Snapdragon 855+ (7 nm)</li>
-                        <li>Main Cameras: 48 MP, 12 MP, 16 MP Dual-LED flash, HDR, panorama</li>
-                        <li>Selfie Camera: 16MP Auto HDR</li>
+                        <li>Main cameras: 48 MP, 12 MP, 16 MP Dual-LED flash, HDR, panorama</li>
+                        <li>Selfie camera: 16MP Auto HDR</li>
                         <li>Screen: 6.55 inches Fluid AMOLED display (1080x2400 resolution & 20:9 aspect ratio)</li>
                         <li>Battery: 3800 mAh</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 ac (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Frosted Silver, Glacier Blue</li>
                         <li>Storage: 128 GB or 256 GB</li>
@@ -464,7 +546,7 @@
                         <li>Processor: HiSilicon Kirin 980 (7 nm)</li>
                         <li>Screen: 6.44 inches Super AMOLED (2340x1080 resolution)</li>
                         <li>Battery: 4100 mAh</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 ac</li>
                         <li>Colour(s): Glacier Ice, Midnight Ocean</li>
                         <li>Storage: 128 GB</li>
@@ -499,7 +581,7 @@
                         <li>Processor: Qualcomm MSM8917 Snapdragon 425 (28 nm)</li>
                         <li>Screen: 5.45 inches LCD Touchscreen display (720x1440 resolution)</li>
                         <li>Battery: 3000 mAh</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): New Aurora Black, New Moroccan Blue</li>
                         <li>Operating System: Android 9.0 Pie</li>
@@ -526,7 +608,7 @@
                         <li>Processor: Qualcomm Snapdragon 636 SDM636</li>
                         <li>Screen: 6.0 inches Super AMOLED Touchscreen display (1080x2160 resolution)
                         <li>Battery: 3000 mAh</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Ceramic Black</li>
                         <li>Operating System: Android 9.0 Pie</li>
@@ -555,7 +637,7 @@
                             aspect
                             ratio (~538 ppi density)
                         <li>Battery: Non-removable Li-Po 3320 mAh battery</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Speakers: Voice 68dB / Noise 71dB / Ring 81dB</li>
                         <li>Colour(s): Midnight Blue</li>
@@ -584,7 +666,7 @@
                         <li>Screen: Super AMOLED capacitive touchscreen, 16M colours, 6.5 inches, 102.0 cm2 (~87.4%
                             screen-to-body ratio), 1080x2400 pixels, 20:9 ratio (~405 ppi density)</li>
                         <li>Battery: Non-removable Li-Po 4000 mAh battery</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Prism Crush Black, White, Blue, Pink</li>
                         <li>Operating System: Android 10.0, One UI 2</li>
@@ -616,7 +698,7 @@
                             screen-to-body
                             ratio), 720x1560 pixels, 20:9 ratio (~270 ppi density)</li>
                         <li>Battery: Non-removable Li-Po 5000 mAh battery</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Frozen Blue, Blazing Red</li>
                         <li>Operating System: Android 10.0, realme UI 1.0</li>
@@ -651,7 +733,7 @@
                             screen-to-body
                             ratio), 1080x2400 pixels, 20:9 ratio (~408 ppi density)</li>
                         <li>Battery: Non-removable Li-Po 4025 mAh battery</li>
-                        <li>Bluetooth Version: 4.2</li>
+                        <li>Bluetooth version: 4.2</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Lightening Black, Unicorn White</li>
                         <li>Operating System: Android 10.0, realme UI 1.0</li>
@@ -681,13 +763,13 @@
                         <li>RAM: 8 GB</li>
                         <li>Processor: Mediatek Helio P95 Octa-core (2x2.2 GHz Cortex-A75 & 6x2.0 GHz Cortex-A55)</li>
                         <li>GPU: PowerVR GM9446</li>
-                        <li>Main Cameras: 64 MP, 13 MP, 8 MP, 2 MP Dual-LED flash, HDR, panorama</li>
-                        <li>Selfie Camera: 44 MP, 2 MP HDR</li>
+                        <li>Main cameras: 64 MP, 13 MP, 8 MP, 2 MP Dual-LED flash, HDR, panorama</li>
+                        <li>Selfie camera: 44 MP, 2 MP HDR</li>
                         <li>Screen: Super AMOLED capacitive touchscreen, 16M colours, 6.4 inches, 101.8 cm2 (~87.4%
                             screen-to-body ratio), 1080x2400 pixels, 20:9 ratio (~405 ppi density)</li>
                         <li>Battery: Non-removable Li-Po 4025 mAh battery</li>
                         <li>Charging: Fast charging 30W, 50% in 20 min</li>
-                        <li>Bluetooth Version: 5.0</li>
+                        <li>Bluetooth version: 5.0</li>
                         <li>Wi-Fi: Wi-Fi 802.11 ac (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Auroral Blue, Midnight Black, Sky White</li>
                         <li>Operating System: Android 10.0, ColorOS 7</li>
@@ -720,7 +802,7 @@
                         <li>Screen: Super AMOLED capacitive touchscreen, 16M colours, 6.4 inches, 96.7 cm2 (~80.9%
                             screen-to-body ratio), 1080x2340 pixels, 19.5:9 ratio (~411 ppi density)</li>
                         <li>Battery: Non-removable Li-Po 6000 mAh battery</li>
-                        <li>Bluetooth Version: 4.2</li>
+                        <li>Bluetooth version: 4.2</li>
                         <li>Wi-Fi: Wi-Fi 802.11 (Supports both 2.4 and 5GHz Networks)</li>
                         <li>Colour(s): Ocean Blue, Space Black, Red</li>
                         <li>Operating System: Android 10.0, One UI 2.0</li>
