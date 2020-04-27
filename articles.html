@@ -120,7 +120,9 @@
 
             </ul>
             <hr>
-            <button class="btn" onclick="window.open('things.comments.html', '', 'width=800,height=600,resizable=no,toolbar=no,top=50%,left=50%, right=50%')">Comments</button>
+            <button class="btn"
+                onclick="OpenCommentsPage('Things')">Comments</button>
+            <button class="btn" onclick="ShareCurrentPage()">Share</button>
         </div>
         <div class="tabcontent" id="AndroidvsiOS">
             <h1>Android vs iOS</h1>
@@ -265,7 +267,8 @@
                             </li>
                         </ul>
                         <hr>
-                        <button class="btn" onclick="window.open('androidvsioscomments.html', '', 'width=800,height=600,resizable=no,toolbar=no,top=50%,left=50%, right=50%')">Comments</button>
+                        <button class="btn"
+                            onclick="OpenCommentsPage('AndroidvsiOS')">Comments</button>
                 </div>
             </div>
         </div>
@@ -274,6 +277,31 @@
         function GoToAndroidVsiOS() {
             window.location.hash = "#AndroidvsiOS";
             window.location.reload();
+        }
+        function ShareCurrentPage() {
+            var location = window.location.toString();
+            var pagename;
+            if (window.location.hash == "#TipsForChoosingAPhone") {
+                pagename = 'Tips for choosing a phone';
+            }
+            else {
+                pagename = "Android vs iOS";
+            }
+            if (navigator.share) {
+                navigator.share({ title: pagename, text: 'Phoner', url: window.location.href });
+            }
+            else {
+                navigator.clipboard.writeText(window.location.href).then(function () {
+                    alert('Link copied to clipboard');
+                }, function () {
+                    alert('We could not share this page.')
+                });
+            }
+        }
+
+        function OpenCommentsPage(pagename) 
+        {
+            window.location.href = "comments.html#" + pagename;
         }
     </script>
     <script src="shared.js"></script>
