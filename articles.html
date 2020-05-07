@@ -1,14 +1,16 @@
 <html>
 
 <head>
+    <script src="hashnavigation.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Articles - Phoner</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="thumbnail.png" type="image/png" />
     <meta charset="utf-8" />
+    <script src="drawer.js"></script>
 </head>
 
-<body>
+<body window.onload="drawer();">
     <div class="busy-loader" id="loader">
         <div class="w-ball-wrapper ball-1">
             <div class="w-ball">
@@ -31,17 +33,15 @@
             </div>
         </div>
     </div>
-    <nav>
-        <a href="home.html" title="Home"><i class="ms-Icon ms-Icon--Home" aria-hidden="true"></i> Home</a>
-        <a href="things.html" title="Articles" class="active">Articles</a>
-        <a href="specs.html" title="Specs">Specs</a>
-        <a href="about.html" title="About">About</a>
-        <a href="http://bit.ly/2QbS3bN" target="_blank" title="Feedback">Feedback</a>
-        <a href="https://www.youtube.com/channel/UCCgDUPx_XgBfgBx-If1uk1g" target="_blank"
-            title="Our YouTube Channel">JUV
-            Studios</a>
-    </nav>
     <div id="elements" style="display: none;">
+        <nav>
+            <a href="home.html" title="Home" aria-label="Home"><i class="ms-Icon ms-Icon--Home" aria-hidden="true"></i>
+                Home</a>
+            <a href="things.html" title="Articles" class="active" aria-label="Articles">Articles</a>
+            <a href="specsnew.html" title="Specs" aria-label="Specs">Specs</a>
+            <a href="about.html" title="About" aria-label="About">About</a>
+            <a href="http://bit.ly/2QbS3bN" target="_blank" title="Feedback" aria-label="Feedback">Feedback</a></li>
+        </nav>
         <header>
             <h1>Articles</h1>
             <p>Read tips, latest phone news, comparisons and more!</p>
@@ -49,13 +49,18 @@
         <div class="tab">
             <input type="search" class="searchbox" placeholder="Search for articles" title="Search for articles"
                 onkeyup="loadSearch()" onsearch="loadSearch()" />
-            <button class="tablinks" onclick="openPage(event, 'TipsForChoosingAPhone')" id="defaultOpen">Tips for
-                choosing a
-                phone</button>
-            <button class="tablinks" onclick="openPage(event, 'AndroidvsiOS')">Android vs iOS</button>
-            <hr style="width: 100%; display: none;" id="Seperator" />
+            <div class="tablinks">
+                <button onclick="openPage(event, 'TipsForChoosingAPhone', true)" id="defaultOpen" aria-label="Tips for
+                    choosing a
+                    phone">Tips for
+                    choosing a
+                    phone</button>
+                <button onclick="openPage(event, 'AndroidvsiOS', true)" aria-label="Android vs iOS">Android vs
+                    iOS</button>
+            </div>
+            <hr style="width: 100%;" id="Seperator">
         </div>
-        <div class="tabcontent" id="TipsForChoosingAPhone">
+        <article id="TipsForChoosingAPhone">
             <h1>Tips for choosing a phone</h1>
             <p>Difficulty choosing the right phone? With the help of these
                 tips, you can easily choose the phone that fit your needs.</p>
@@ -100,7 +105,7 @@
             </hr>
             <p>Each Operating System has its own pros and cons. Therefore,
                 it is very important to choose the right one to get the best experience. Look for the
-                <a class="ms-Link" onclick="GoToAndroidVsiOS()">Android vs iOS Page</a> on our
+                <a class="ms-Link" onclick="navigateToHash('AndroidvsiOS')">Android vs iOS Page</a> on our
                 website for more
                 details.</p>
             <hr>
@@ -120,11 +125,10 @@
 
             </ul>
             <hr>
-            <button class="btn"
-                onclick="OpenCommentsPage('Things')">Comments</button>
-            <button class="btn" onclick="ShareCurrentPage()">Share</button>
-        </div>
-        <div class="tabcontent" id="AndroidvsiOS">
+            <button class="btn" onclick="shareCurrentPage()"><i class="ms-Icon ms-Icon--Share" aria-hidden="true"></i>
+                Share</button>
+        </article>
+        <article id="AndroidvsiOS">
             <h1>Android vs iOS</h1>
             <p>Any device without an operating system is useless, Phones too!
                 Today, the two major mobile operating systems are: Android and iOS. Each of these platforms have their
@@ -267,44 +271,17 @@
                             </li>
                         </ul>
                         <hr>
-                        <button class="btn"
-                            onclick="OpenCommentsPage('AndroidvsiOS')">Comments</button>
+                        <button class="btn" onclick="shareCurrentPage()"><i class="ms-Icon ms-Icon--Share"
+                                aria-hidden="true"></i> Share</button>
                 </div>
             </div>
-        </div>
+        </article>
     </div>
+    <script src="share.js"></script>
+    <script src="masterDetail.js"></script>
     <script>
-        function GoToAndroidVsiOS() {
-            window.location.hash = "#AndroidvsiOS";
-            window.location.reload();
-        }
-        function ShareCurrentPage() {
-            var location = window.location.toString();
-            var pagename;
-            if (window.location.hash == "#TipsForChoosingAPhone") {
-                pagename = 'Tips for choosing a phone';
-            }
-            else {
-                pagename = "Android vs iOS";
-            }
-            if (navigator.share) {
-                navigator.share({ title: pagename, text: 'Phoner', url: window.location.href });
-            }
-            else {
-                navigator.clipboard.writeText(window.location.href).then(function () {
-                    alert('Link copied to clipboard');
-                }, function () {
-                    alert('We could not share this page.')
-                });
-            }
-        }
-
-        function OpenCommentsPage(pagename) 
-        {
-            window.location.href = "comments.html#" + pagename;
-        }
+        window.onload = initMasterDetail();
     </script>
-    <script src="shared.js"></script>
 </body>
 
 </html>

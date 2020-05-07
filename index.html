@@ -2,52 +2,57 @@
 <html>
 
 <head>
+    <script src="swipe.js"></script>
+    <script src="language.js"></script>
+    <script>
+        function onKeyUp() {
+            window.location.href = "home.html";
+        }
+    </script>
     <title>Phoner</title>
     <link rel="icon" href="thumbnail.png" type="image/png" />
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <style>
-    body, html {
-  height: 100%;
-}
+    body,
+    html {
+        height: 100%;
+    }
 
-.bg {
-  /* The image used */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("architecture-art-bridge-cliff-459203.jpg");
+    .bg {
+        /* The image used */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("architecture-art-bridge-cliff-459203.jpg");
 
-  /* Full height */
-  height: auto;
+        /* Full height */
+        height: auto;
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-}
-.text{
-    top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  position: absolute; /* Position the background text */
-  color: #f1f1f1; /* Grey text */
-  padding: 20px; /* Some padding */
-}
-h1{
+    }
+
+    .text {
+        position: absolute;
+        /* Position the background text */
+        color: #f1f1f1;
+        /* Grey text */
+        padding: 20px;
+        /* Some padding */
+    }
+
+    /*h1{
     font-family: 'Montserrat', sans-serif;
-}
+}*/
 </style>
-<body onkeypress="OnKeyUp()" class="bg">
-    <div class="text">
+
+<body onkeypress="onKeyUp()" class="bg">
+    <div class="text verticalCenter" id="Welcome">
         <h1>Welcome to Phoner!</h1>
-        <button onclick="OnKeyUp()" class="compactbtn">Let's Go</button>
+        <button onclick="onKeyUp()" class="compactbtn">Let's Go</button>
     </div>
 </body>
-<script>
-    function OnKeyUp() {
-        window.location.href = "home.html";
-    }
-</script>
 
 </html>

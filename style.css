@@ -1,22 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-@import url("https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.min.css");
+/*@import url("https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.min.css");*/
+
+@import url("https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
 ul {
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 li {
-    padding: 5px;
+    padding: 10px;
 }
 
 /* Page Content */
 
 .content {
-    padding: 5px;
+    padding: 0px;
 }
 
 .row {
@@ -24,9 +26,9 @@ li {
     flex-direction: row;
 }
 
-.column {
+.row section, .column {
     width: 50%;
-    padding: 5px;
+    padding: 10px;
 }
 
 nav {
@@ -418,7 +420,7 @@ h1 {
 .tab {
     display: flex;
     float: left;
-    width: 30%;
+    width: 25%;
     flex-direction: column;
 }
 
@@ -435,13 +437,14 @@ h1 {
     outline: none;
     text-align: left;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 16px;
+    transition: all 0.3s;
 }
 
 /* Change background color of buttons on hover */
 
 .tab button:hover {
-    background-color: #4f6bed;
+    background: #333;
 }
 
 /* Create an active/current "tab button" class */
@@ -452,10 +455,10 @@ h1 {
 
 /* Style the tab content */
 
-.tabcontent {
+.tabcontent, article {
     float: left;
-    padding: 10px;
-    width: 70%;
+    padding: 16px;
+    width: 75%;
     border: none;
 }
 
@@ -540,6 +543,7 @@ h2 {
     cursor: pointer;
     border-radius: 2px;
     font-family: 'Lato', sans-serif;
+    margin: 2px;
 }
 
 .btn:hover {
@@ -562,30 +566,19 @@ a:hover {
     color: #007af2;
 }
 
-/* Three columns side by side */
-
-.column3 {
+.card {
     float: left;
-    border-radius: 2px;
+    border-radius: 4px;
     margin-bottom: 10px;
-    padding: 0 8px;
+    padding: 10px;
     background: black;
     color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 /* Some left and right padding inside the container */
-
-.container {
-    padding: 0 16px;
-}
-
-/* Clear floats */
-
-.container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
 
 .title {
     color: grey;
@@ -593,22 +586,15 @@ a:hover {
 }
 
 .person {
-    width: 25%;
+    width: 50%;
     background-color: white;
-    height: 25%;
     border-radius: 50%;
-    margin: 10px;
+    height: 50%;
 }
 
 /* When the screen is smaller than 700pixels */
 
 @media screen and (max-width: 700px) {
-    .column {
-        width: 100%;
-    }
-    .row {
-        flex-direction: column;
-    }
     nav {
         justify-content: center;
         flex-direction: column;
@@ -622,16 +608,22 @@ a:hover {
     nav a.active {
         box-shadow: none;
     }
+}
+
+/* When the screen is smaller than 800pixels */
+
+@media screen and (max-width: 800px) {
+    .row section, .column {
+        width: 100%;
+    }
+    .row {
+        flex-direction: column;
+    }
     .tab {
         width: 100%;
     }
-    .tabcontent {
+    article {
         width: 100%;
-    }
-    .column3 {
-        width: 100%;
-        display: block;
-        border-radius: 2px;
     }
 }
 
@@ -649,4 +641,15 @@ a:hover {
 
 .compactbtn:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.centeredDiv {
+    text-align: center;
+}
+
+.verticalCenter {
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
