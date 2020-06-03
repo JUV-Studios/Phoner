@@ -12,28 +12,28 @@
       box-sizing: border-box;
     }
 
-    /* Header/Logo Title */
-    header {
-      background: black;
+    /* The hero image */
+    .hero-image {
+      /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://bit.ly/2TPZDvd");
       /* Position and center the image to scale nicely on all screens */
       background-position: center;
       background-repeat: no-repeat;
-      /*background-size: cover;*/
-      position: relative;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://bit.ly/2TPZDvd");
+      background-size: auto;
     }
   </style>
+
 </head>
 
 <body>
   <nav>
-    <a href="home.html" class="active" title="Home" aria-label="Home"><i class="ms-Icon ms-Icon--Home" aria-hidden="true"></i> Home</a>
+    <a href="home.html" class="active" title="Home" aria-label="Home">Home</a>
     <a href="articles.html" title="Articles" aria-label="Articles">Articles</a>
     <a href="specsnew.html" title="Specs" aria-label="Specs">Specs</a>
     <a href="about.html" title="About" aria-label="About">About</a>
-    <a href="https://bit.ly/2QbS3bN" title="Feedback" target="_blank" aria-label="Feedback">Feedback</a>
+    <a href="https://bit.ly/2QbS3bN" title="Feedback" target="_blank" rel="noopener noreferrer" aria-label="Feedback">Feedback</a>
   </nav>
-  <header>
+  <header class="hero-image">
     <h1>Home</h1>
     <p>Welcome to Phoner!</p>
   </header>
@@ -48,11 +48,10 @@
           latest news on smartphones.</p>
       </section>
       <section>
-        <img src="https://guardian.ng/wp-content/uploads/2018/06/Mobile-Phones-Main-Article-1.jpg" width="100%"
-          height="500" />
+        <img src="https://guardian.ng/wp-content/uploads/2018/06/Mobile-Phones-Main-Article-1.jpg" style="width: 100%;"
+          height="500" alt="Sorry, we could not display this image" />
       </section>
     </div>
-  </div>
   </div>
 </body>
 

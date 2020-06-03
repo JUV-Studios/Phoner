@@ -1,37 +1,51 @@
-window.onresize = showHideSeperator;
 let originalTitle;
+window.onresize = changeSeperatorState;
+
+document.onmouseover = function () {
+    window.innerDocClick = true;
+}
+
+document.onmouseleave = function () {
+    window.innerDocClick = false;
+}
+
+window.onhashchange = function () {
+    if (!window.innerDocClick) {
+        var i, tablinks;
+        tablinks = document.getElementsByClassName('tab')[0].getElementsByTagName('button');
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        setCurrentPage(window.location.hash.substr(1));
+    }
+}
+
 function initMasterDetail() {
+    originalTitle = document.title;
     document.getElementById('loader').style.display = "none";
     document.getElementById('elements').style.display = "block";
     if (window.location.hash) {
-        openPage(event, window.location.hash.substr(1));
+        setCurrentPage(window.location.hash.substr(1));
     } else {
         document.getElementById("defaultOpen").click();
     }
-    showHideSeperator();
-    originalTitle = document.title;
+    changeSeperatorState();
+    window.scrollTo(0, 0);
 }
 
-function openPage(evt, pageName, isbtn) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByTagName('article');
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
+function openPage(evt, pageName) {
+    setCurrentPage(pageName);
+    var i, tablinks;
     tablinks = document.getElementsByClassName('tab')[0].getElementsByTagName('button');
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(pageName).style.display = "block";
-    window.location.hash = "#" + pageName;
-    if (isbtn) {
-        evt.currentTarget.className += " active"; 1
-        document.title = evt.currentTarget.getAttribute('aria-label') + " - " + originalTitle;
-    }
+    evt.currentTarget.className += " active";
+    document.title = evt.currentTarget.getAttribute('aria-label') + " - " + originalTitle;
 }
 
 function loadSearch() {
-    var input, filter, ul, li, a, i;
+    var input, filter, ul, li, i;
     input = document.getElementsByClassName("searchbox")[0];
     filter = input.value.toUpperCase();
     ul = document.getElementById("tablinks");
@@ -43,28 +57,29 @@ function loadSearch() {
         else {
             li[i].style.display = "none";
         }
-        showHideSeperator();
-    }
-}
-function launchUri(uri) {
-    try {
-        if (confirm('Do you want to navigate to this link? Do this only if you trust it.')) {
-            window.open(uri);
-        }
-        else {
-            return;
-        }
-    }
-    catch (_a) {
-        throw "The launcher service can't launch this URL. It might not exists";
+        changeSeperatorState();
     }
 }
 
-function showHideSeperator() {
+function launchUri(uri) {
+    window.open(uri);
+}
+
+function changeSeperatorState() {
     if (window.innerWidth <= 800) {
-        document.getElementById("Seperator").style.display = "block";
+        document.getElementById("Seperator").className = "horizontalSeperator";
     }
     else {
-        document.getElementById("Seperator").style.display = "none";
+        document.getElementById("Seperator").className = "verticalSeperator";
     }
+}
+
+function setCurrentPage(pageName) {
+    let i;
+    let tabcontent = document.getElementsByTagName('article');
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    document.getElementById(pageName).style.display = "block";
+    window.location.hash = "#" + pageName;
 }

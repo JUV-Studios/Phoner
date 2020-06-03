@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-/*@import url("https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.min.css");*/
-
 @import url("https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
+
 ul {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -19,6 +18,7 @@ li {
 
 .content {
     padding: 0px;
+    overflow-x: hidden;
 }
 
 .row {
@@ -37,29 +37,30 @@ nav {
     flex-wrap: wrap;
     padding: 5px;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(24, 26, 27, .9);
+    position: fixed;
+    top: 0;
+    width: 100vw;
 }
 
 /* Style the links inside the navigation bar */
 
 nav a {
     float: left;
-    color: black;
+    color: #FFFFFF;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     padding: .5rem;
     border-radius: 2px;
-    margin-right: 5px;
+    margin-left: 5px;
 }
 
 /* Change the color of links on hover */
 
 nav a:hover {
-    background-color: #ddd;
-    color: black;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    color: dodgerblue;
 }
 
 /* Add an active class to highlight the current page */
@@ -69,18 +70,19 @@ nav a.active {
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-
 body {
-    background-color: #1a1a1a;
+    background-color: #121212;
     color: white;
     margin: 0;
-    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+    overflow-x: hidden;
 }
 
 .busy-loader {
@@ -401,16 +403,6 @@ body {
     }
 }
 
-.acrylic {
-    /* Parent background + Gaussian blur */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    /* Exclusion blend */
-    background-blend-mode: exclusion;
-    /* Color/tint overlay + Opacity */
-    background: rgb(255, 255, 255, .6);
-}
-
 h1 {
     font-family: 'Roboto', sans-serif;
 }
@@ -424,6 +416,12 @@ h1 {
     flex-direction: column;
 }
 
+#tablinks {
+    overflow-y: scroll;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
 /* Style the buttons inside the tab */
 
 .tab button {
@@ -431,7 +429,7 @@ h1 {
     display: block;
     background-color: inherit;
     color: white;
-    padding: 15px;
+    padding: 10px;
     width: 100%;
     border: none;
     outline: none;
@@ -455,17 +453,28 @@ h1 {
 
 /* Style the tab content */
 
-.tabcontent, article {
+article {
     float: left;
     padding: 16px;
     width: 75%;
     border: none;
+    transition: all .2s ease-out;
+    overflow-x: hidden;
+}
+
+article p{
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    -o-user-select: text;
+    user-select: text;
 }
 
 .searchbox {
     width: auto;
     margin: 10px;
-    padding: 10px;
+    padding: 8px;
     transition: .3s;
     border: 1px solid #aaa;
     outline: none;
@@ -514,10 +523,13 @@ p {
 header {
     padding: 60px;
     text-align: center;
-    background: #1abc9c;
+    font-size: large;
     color: white;
-    font-size: 20px;
-    transition: 0.2s;
+}
+
+.defaultHeader
+{
+    background: #1abc9c;
 }
 
 h4 {
@@ -536,7 +548,7 @@ h2 {
     background-color: #ddd;
     border: none;
     color: black;
-    padding: 10px 20px;
+    padding: 8px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -557,7 +569,7 @@ h2 {
 a {
     text-decoration: none;
     color: dodgerblue;
-    font-size: 16;
+    font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
 }
@@ -598,9 +610,11 @@ a:hover {
     nav {
         justify-content: center;
         flex-direction: column;
+        position: initial;
     }
     nav a {
         margin-right: 0px;
+        margin: 5px;
     }
     nav a:hover {
         box-shadow: none;
@@ -621,6 +635,12 @@ a:hover {
     }
     .tab {
         width: 100%;
+    }
+    #tablinks
+    {
+        overflow-y: hidden;
+        height: initial;
+        overflow-x: hidden;
     }
     article {
         width: 100%;
@@ -652,4 +672,12 @@ a:hover {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.verticalSeperator {
+    display: none;
+}
+
+.horizontalSeperator {
+    width: 100%;
 }

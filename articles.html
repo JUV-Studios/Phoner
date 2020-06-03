@@ -1,16 +1,14 @@
 <html>
 
 <head>
-    <script src="hashnavigation.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Articles - Phoner</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="thumbnail.png" type="image/png" />
     <meta charset="utf-8" />
-    <script src="drawer.js"></script>
 </head>
 
-<body window.onload="drawer();">
+<body>
     <div class="busy-loader" id="loader">
         <div class="w-ball-wrapper ball-1">
             <div class="w-ball">
@@ -35,14 +33,14 @@
     </div>
     <div id="elements" style="display: none;">
         <nav>
-            <a href="home.html" title="Home" aria-label="Home"><i class="ms-Icon ms-Icon--Home" aria-hidden="true"></i>
-                Home</a>
-            <a href="things.html" title="Articles" class="active" aria-label="Articles">Articles</a>
+            <a href="home.html" title="Home" aria-label="Home">Home</a>
+            <a href="articles.html" title="Articles" class="active" aria-label="Articles">Articles</a>
             <a href="specsnew.html" title="Specs" aria-label="Specs">Specs</a>
             <a href="about.html" title="About" aria-label="About">About</a>
-            <a href="http://bit.ly/2QbS3bN" target="_blank" title="Feedback" aria-label="Feedback">Feedback</a></li>
+            <a href="http://bit.ly/2QbS3bN" target="_blank" rel="noopener noreferrer" title="Feedback"
+                aria-label="Feedback">Feedback</a></li>
         </nav>
-        <header>
+        <header class="defaultHeader">
             <h1>Articles</h1>
             <p>Read tips, latest phone news, comparisons and more!</p>
         </header>
@@ -50,15 +48,15 @@
             <input type="search" class="searchbox" placeholder="Search for articles" title="Search for articles"
                 onkeyup="loadSearch()" onsearch="loadSearch()" />
             <div class="tablinks">
-                <button onclick="openPage(event, 'TipsForChoosingAPhone', true)" id="defaultOpen" aria-label="Tips for
+                <button onclick="openPage(event, 'TipsForChoosingAPhone')" id="defaultOpen" aria-label="Tips for
                     choosing a
                     phone">Tips for
                     choosing a
                     phone</button>
-                <button onclick="openPage(event, 'AndroidvsiOS', true)" aria-label="Android vs iOS">Android vs
+                <button onclick="openPage(event, 'AndroidvsiOS')" aria-label="Android vs iOS">Android vs
                     iOS</button>
             </div>
-            <hr style="width: 100%;" id="Seperator">
+            <hr id="Seperator">
         </div>
         <article id="TipsForChoosingAPhone">
             <h1>Tips for choosing a phone</h1>
@@ -112,14 +110,17 @@
             <h2>References and links</h2>
             <ul>
                 <li> <a href="https://www.theverge.com/2019/3/14/18265265/samsung-all-display-phone-under-screen-selfie-camera-no-cutout"
-                        class="ms-link" target="_blank">Samsung is working on ‘perfect full-screen’ devices with
+                        class="ms-link" target="_blank" rel="noopener noreferrer">Samsung is working on ‘perfect
+                        full-screen’ devices with
                         selfie cameras under the display - The Verge</a></li>
                 <li><a href="http://www.iphonehacks.com/2014/01/how-much-storage-space-16gb-smartphone.html"
-                        class="ms-Link" target="_blank">How much storage space does your 16GB smartphone really
+                        class="ms-Link" target="_blank" rel="noopener noreferrer">How much storage space does your 16GB
+                        smartphone really
                         have? -
                         iPhone Hacks</a></li>
                 <li> <a href="https://wccftech.com/iphone-android-flagship-battery-life-getting-worse/" class="ms-Link"
-                        target="_blank">iPhone Battery Life Is Getting Worse With Each Successive
+                        target="_blank" rel="noopener noreferrer">iPhone Battery Life Is Getting Worse With Each
+                        Successive
                         Generation – Android
                         Flagships Suffering the Same, According to Tests - Wccftech</a></li>
 
@@ -147,7 +148,7 @@
                         phones. About
                         76.23% of all phones in the world run on the Android operating system.</p>
                     <a href="https://www.android.com/" class="ms-Link" aria-label="Android Official Website"
-                        target="_blank">Android
+                        target="_blank" rel="noopener noreferrer">Android
                         Official
                         Website</a>
                     <i><b><u>
@@ -216,72 +217,75 @@
                         all
                         phones in the world are iPhones.</p>
                     <a href="https://www.apple.com/ios/ios-13/" class="ms-Link" aria-label="iOS Official Website"
-                        target="_blank">iOS Official
+                        target="_blank" rel="noopener noreferrer">iOS Official
                         Website</a>
                     <i><b><u>
                                 <h3>Pros</h3>
                             </u></b></i>
                     <h4>Built-in Barcode & QR code Scanner</h4>
                     <p>iOS has a built-in barcode scanner and QR code reader while on Android you'll install one.
-                        <h4>Security</h4>
-                        <p>iOS is more secure than Android OS when it come to
-                            protecting your data because Google is a advertising company who don't respect your privacy.
-                            It
-                            is locked
-                            from installing apps only from the App Store and they're verified by Apple so you can't
-                            download
-                            malware.
-                            iOS only runs on iPhones, so you get updates immediately when it's released.</p>
-                        <h4>Perfomance</h4>
-                        <p>iOS only runs on iPhones so it is optimized for it's
-                            hardware and you get decent perfomance even on low end models.</p>
-                        <i><b><u>
-                                    <h3>Cons<h3>
-                                </u></b></i>
-                        <h4 style="font-family:'Open Sans', sans-serif;">You can't change the default apps</h4>
-                        <p>In iOS you cannot change the default apps and they remain
-                            the Apple apps unless you jailbreak (Jaibreaking may be illegal based on your region).</p>
-                        <h4 style="font-family: 'Montserrat', sans-serif;">Less device options</h4>
-                        <p>iOS is exclusively availabe for the iPhone only, so if you
-                            want phone that has iOS, you can only go for the iPhone (which is expensive and may not suit
-                            your budget).
-                        </p>
-                        <h4 style="font-family: 'Montserrat', sans-serif;">File Management</h4>
-                        <p>In iOS, you can only view photos when you connect to a PC.
-                            To view and edit a file, you can use
-                            iTunes on Windows and earlier versions of macOS or Finder on macOS Catalina.</p>
-                        <h4 style="font-family:'Open Sans', sans-serif;">Locked to App Store</h4>
-                        <p>In iOS, you can only install apps from
-                            the App Store. To sideload apps on an iPhone, you need to jailbreak your iPhone which might
-                            be
-                            illegal
-                            based on you
-                            region.</p>
-                        <h4 style="font-family:'Open Sans', sans-serif;">No SD Card Support</h4>
-                        <p>No iPhones till this date support SD Cards. This means you
-                            can only use the built-in storage and can't extent it.</p>
-                        <h4 style="font-family:'Open Sans', sans-serif;">Language support</h4>
-                        <p>iOS supports fewer languages than Android, which makes it
-                            not friendly for everyone.</p>
-                        <hr>
-                        <h2>References and links</h2>
-                        <ul>
-                            <li> <a href="https://support.apple.com/en-us/HT208843" target="_blank">Scan a QR code with
-                                    your iPhone, iPad, or iPod touch - Apple</a>
-                            </li>
-                        </ul>
-                        <hr>
-                        <button class="btn" onclick="shareCurrentPage()"><i class="ms-Icon ms-Icon--Share"
-                                aria-hidden="true"></i> Share</button>
+                    <h4>Security</h4>
+                    <p>iOS is more secure than Android OS when it come to
+                        protecting your data because Google is a advertising company who don't respect your privacy.
+                        It
+                        is locked
+                        from installing apps only from the App Store and they're verified by Apple so you can't
+                        download
+                        malware.
+                        iOS only runs on iPhones, so you get updates immediately when it's released.</p>
+                    <h4>Perfomance</h4>
+                    <p>iOS only runs on iPhones so it is optimized for it's
+                        hardware and you get decent perfomance even on low end models.</p>
+                    <i><b><u>
+                                <h3>Cons<h3>
+                            </u></b></i>
+                    <h4 style="font-family:'Open Sans', sans-serif;">You can't change the default apps</h4>
+                    <p>In iOS you cannot change the default apps and they remain
+                        the Apple apps unless you jailbreak (Jaibreaking may be illegal based on your region).</p>
+                    <h4 style="font-family: 'Montserrat', sans-serif;">Less device options</h4>
+                    <p>iOS is exclusively availabe for the iPhone only, so if you
+                        want phone that has iOS, you can only go for the iPhone (which is expensive and may not suit
+                        your budget).
+                    </p>
+                    <h4 style="font-family: 'Montserrat', sans-serif;">File Management</h4>
+                    <p>In iOS, you can only view photos when you connect to a PC.
+                        To view and edit a file, you can use
+                        iTunes on Windows and earlier versions of macOS or Finder on macOS Catalina.</p>
+                    <h4 style="font-family:'Open Sans', sans-serif;">Locked to App Store</h4>
+                    <p>In iOS, you can only install apps from
+                        the App Store. To sideload apps on an iPhone, you need to jailbreak your iPhone which might
+                        be
+                        illegal
+                        based on you
+                        region.</p>
+                    <h4 style="font-family:'Open Sans', sans-serif;">No SD Card Support</h4>
+                    <p>No iPhones till this date support SD Cards. This means you
+                        can only use the built-in storage and can't extent it.</p>
+                    <h4 style="font-family:'Open Sans', sans-serif;">Language support</h4>
+                    <p>iOS supports fewer languages than Android, which makes it
+                        not friendly for everyone.</p>
+                    <hr>
+                    <h2>References and links</h2>
+                    <ul>
+                        <li> <a href="https://support.apple.com/en-us/HT208843" target="_blank"
+                                rel="noopener noreferrer">Scan a QR code with
+                                your iPhone, iPad, or iPod touch - Apple</a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <button class="btn" onclick="shareCurrentPage()"><i class="ms-Icon ms-Icon--Share"
+                            aria-hidden="true"></i> Share</button>
                 </div>
             </div>
         </article>
+        <script src="https://unpkg.com/share-api-polyfill/dist/share-min.js"></script>
+        <script src="share.js"></script>
+        <script src="masterDetail.js"></script>
+        <script>
+            window.onload = initMasterDetail();
+        </script>
+        <script src="hashnavigation.js"></script>
     </div>
-    <script src="share.js"></script>
-    <script src="masterDetail.js"></script>
-    <script>
-        window.onload = initMasterDetail();
-    </script>
 </body>
 
 </html>

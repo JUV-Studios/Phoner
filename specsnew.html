@@ -2,6 +2,12 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Specs - Phoner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="thumbnail.png" type="image/png" />
+    <meta charset="utf-8" />
+    <script src="https://unpkg.com/share-api-polyfill/dist/share-min.js"></script>
     <script src="language.js"></script>
     <script src="share.js"></script>
     <script src="masterDetail.js"></script>
@@ -13,7 +19,6 @@
                 if (result == true) {
                     document.getElementById('tablinks').children[0].id = "defaultOpen";
                     initMasterDetail();
-                    window.scrollTo(0, 0);
                 }
                 else {
                     if (confirm("Sorry, we couldn't load this page. Would you like to send us feedback?")) {
@@ -57,6 +62,7 @@
                     let column1 = document.createElement('section');
                     let column2 = document.createElement('section');
                     let img = document.createElement('img');
+                    img.alt = "Sorry, we could not display this image";
                     let ul = document.createElement('ul');
                     let fields = doc.data();
                     for (let key of Object.keys(fields)) {
@@ -138,7 +144,7 @@
             button.innerHTML = id;
             button.onclick = function (event) {
                 tabbtnClick = true;
-                openPage(event, dataId, true);
+                openPage(event, dataId);
             }
             button.setAttribute('aria-label', id);
             button.setAttribute('data-id', dataId);
@@ -213,11 +219,6 @@
             return shareBtn;
         }
     </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Specs - Phoner</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="thumbnail.png" type="image/png" />
-    <meta charset="utf-8" />
     <style>
         img {
             margin: 10px;
@@ -256,16 +257,13 @@
     </div>
     <div id="elements" style="display: none;">
         <nav>
-            <a href="home.html" title="Home"><i class="ms-Icon ms-Icon--Home" aria-hidden="true"></i> Home</a>
+            <a href="home.html" title="Home">Home</a>
             <a href="articles.html" title="Articles">Articles</a>
             <a href="specsnew.html" title="Specs" class="active">Specs</a>
             <a href="about.html" title="About">About</a>
-            <a href="http://bit.ly/2QbS3bN" target="_blank" title="Feedback">Feedback</a>
-            <a href="https://www.youtube.com/channel/UCCgDUPx_XgBfgBx-If1uk1g" target="_blank"
-                title="Our YouTube Channel">JUV
-                Studios</a>
+            <a href="http://bit.ly/2QbS3bN" target="_blank" rel="noopener noreferrer" title="Feedback">Feedback</a>
         </nav>
-        <header>
+        <header class="defaultHeader  ">
             <h1>Specs</h1>
             <p>View and compare the specs of different phones.</p>
         </header>
@@ -274,7 +272,7 @@
                 onkeyup="loadSearch()" onsearch="loadSearch()" />
             <div id="tablinks">
             </div>
-            <hr style="width: 100%;" id="Seperator">
+            <hr id="Seperator">
         </div>
     </div>
 </body>
