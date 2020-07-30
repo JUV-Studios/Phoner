@@ -545,9 +545,9 @@ h2 {
 }
 
 .btn {
-    background-color: #ddd;
+    background-color: black;
     border: none;
-    color: black;
+    color: #dddddd;
     padding: 8px 15px;
     text-align: center;
     text-decoration: none;
