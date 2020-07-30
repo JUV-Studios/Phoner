@@ -16,23 +16,16 @@
     <script>
         window.onload = function () {
             renderPhones().then(function (result) {
-                if (result == true) {
+                if (result) {
                     document.getElementById('tablinks').children[0].id = "defaultOpen";
                     initMasterDetail();
                 }
                 else {
-                    if (confirm("Sorry, we couldn't load this page. Would you like to send us feedback?")) {
-                        document.getElementById('loader').style.display = "none";
-                        window.open('http://bit.ly/2QbS3bN');
-                        window.location.href = "index.html";
-                    }
-                    else
-                    {
-                        window.location.href = "index.html";
-                    }
+					window.location.href = "index.html#Error";
                 }
             });
         };
+		
         async function renderPhones() {
             try {
                 // Your web app's Firebase configuration

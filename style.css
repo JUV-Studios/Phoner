@@ -37,7 +37,7 @@ nav {
     flex-wrap: wrap;
     padding: 5px;
     justify-content: center;
-    background-color: rgb(24, 26, 27, .9);
+    background-color: black;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -657,6 +657,7 @@ a:hover {
     font-size: 16px;
     cursor: pointer;
     text-align: center;
+	margin-top: 8px;
 }
 
 .compactbtn:hover {

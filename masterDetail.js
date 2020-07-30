@@ -35,9 +35,8 @@ function initMasterDetail() {
 
 function openPage(evt, pageName) {
     setCurrentPage(pageName);
-    var i, tablinks;
-    tablinks = document.getElementsByClassName('tab')[0].getElementsByTagName('button');
-    for (i = 0; i < tablinks.length; i++) {
+    let tablinks = document.getElementsByClassName('tab')[0].getElementsByTagName('button');
+    for (var i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     evt.currentTarget.className += " active";
