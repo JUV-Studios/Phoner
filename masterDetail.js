@@ -82,3 +82,8 @@ function setCurrentPage(pageName) {
     document.getElementById(pageName).style.display = "block";
     window.location.hash = "#" + pageName;
 }
+
+function navigateToHash(hash) {
+    window.location.hash = '#' + hash;
+    window.location.reload();
+}

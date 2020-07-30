@@ -647,7 +647,7 @@ a:hover {
     }
 }
 
-.compactbtn {
+.compactBtn {
     display: block;
     width: 100%;
     border: none;
@@ -660,7 +660,7 @@ a:hover {
 	margin-top: 8px;
 }
 
-.compactbtn:hover {
+.compactBtn:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
