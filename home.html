@@ -25,34 +25,41 @@
 
 </head>
 
-<body>
-  <nav>
-    <a href="home.html" class="active" title="Home" aria-label="Home">Home</a>
-    <a href="articles.html" title="Articles" aria-label="Articles">Articles</a>
-    <a href="specsnew.html" title="Specs" aria-label="Specs">Specs</a>
-    <a href="about.html" title="About" aria-label="About">About</a>
-    <a href="https://bit.ly/2QbS3bN" title="Feedback" target="_blank" rel="noopener noreferrer" aria-label="Feedback">Feedback</a>
-  </nav>
-  <header class="hero-image">
-    <h1>Home</h1>
-    <p>Welcome to Phoner!</p>
-  </header>
-  <div class="content">
-    <div class="row">
-      <section>
-        <p>Hello! Using Phoner, you can easily decide which phone to buy
-          and get tips on what specs to consider based on your workflow and your usecase.</p>
-        <p>You can also understand the features and functionality of
-          different mobile operating systems. </p>
-        <p>You can also learn some common mobile phone tricks and read
-          latest news on smartphones.</p>
-      </section>
-      <section>
-        <img src="https://guardian.ng/wp-content/uploads/2018/06/Mobile-Phones-Main-Article-1.jpg" style="width: 100%;"
-          height="500" alt="Sorry, we could not display this image" />
-      </section>
-    </div>
-  </div>
+<body style="verflow: hidden;">
+	<div class="busy-loader" id="loader">
+		<div class="w-ball-wrapper ball-1">
+	    	<div class="w-ball"></div>
+	    </div>
+	    <div class="w-ball-wrapper ball-2">
+	        <div class="w-ball"></div>
+	    </div>
+	    <div class="w-ball-wrapper ball-3">
+	        <div class="w-ball"></div>
+	    </div>
+	    <div class="w-ball-wrapper ball-4">
+	        <div class="w-ball"></div>
+	    </div>
+	    <div class="w-ball-wrapper ball-5">
+	        <div class=" w-ball"></div>
+	    </div>
+	</div>
+	<div id="content" style="display: none;">
+		<nav>
+		    <a href="home.html" class="active" title="Home" aria-label="Home">Home</a>
+		    <a href="articles.html" title="Articles" aria-label="Articles">Articles</a>
+		    <a href="specsnew.html" title="Specs" aria-label="Specs">Specs</a>
+		    <a href="about.html" title="About" aria-label="About">About</a>
+		    <a href="feedback.html" title="Feedback" aria-label="Feedback">Feedback</a>
+		  </nav>
+		<iframe src="https://sway.office.com/s/DUOTWdDC32CcU4H5/embed" title="Intro" allowfullscreen mozallowfullscreen msallowfullscreen webkitallowfullscreen onload="onLoad()"></iframe>
+	</div>
+	<script>
+		function onLoad()
+		{
+			document.getElementById('loader').style.display = "none";
+			document.getElementById('content').style.display = "block";
+		}
+	</script>
 </body>
 
 </html>
