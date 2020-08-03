@@ -172,7 +172,15 @@
       </section>
     </div>
   </div>
-  </div>
+  <script>
+    window.onload = function()
+    {
+      if (window.location.hash == "#app")
+      {
+        document.getElementsByTagName('nav')[0].style.display = "none";
+      }
+    }
+  </script>
 </body>
 
 </html>
