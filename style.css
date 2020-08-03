@@ -38,7 +38,7 @@ nav {
     padding: 5px;
     justify-content: center;
     background-color: black;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100vw;
 }
@@ -454,7 +454,6 @@ h1 {
 /* Style the tab content */
 
 article {
-    float: left;
     padding: 16px;
     width: 75%;
     border: none;
@@ -726,5 +725,6 @@ iframe {
 	border: none; 
 	width: 100%; 
 	height: 100vh; 
-	margin: 0px;
+    margin: 0px;
+    overflow: scroll;
 }
