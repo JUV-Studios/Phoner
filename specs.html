@@ -29,7 +29,7 @@
         async function renderPhones() {
             try {
                 // Your web app's Firebase configuration
-                let firebaseConfig = {
+                const firebaseConfig = {
                     apiKey: "AIzaSyDpgnVb5MmOsLxX3BiEwtuk8sn-ClWwtYY",
                     authDomain: "phoner-db69a.firebaseapp.com",
                     databaseURL: "https://phoner-db69a.firebaseio.com",
@@ -41,14 +41,13 @@
                 };
                 // Initialize Firebase
                 firebase.initializeApp(firebaseConfig);
-                let database = firebase.firestore();
+                const database = firebase.firestore();
                 let phones = database.collection("PhoneSpecs").orderBy("Bluetooth version", "desc");
                 let querySnapshot = await phones.get();
                 querySnapshot.forEach((doc) => {
                     let btn = createTabButton(doc.id);
                     let panel = createTabContent(doc.id);
-                    let heading = createHeading(doc.id);
-                    panel.appendChild(heading);
+                    const heading = createHeading(doc.id);
                     let row = document.createElement('div');
                     row.className = "row";
                     let buttonGroup = document.createElement('div');
@@ -57,8 +56,8 @@
                     let img = document.createElement('img');
                     img.alt = "Sorry, we could not display this image";
                     let ul = document.createElement('ul');
-                    let fields = doc.data();
-                    for (let key of Object.keys(fields)) {
+                    const fields = doc.data();
+                    for (const key of Object.keys(fields)) {
                         if (key.startsWith('btn')) {
                             switch (key) {
                                 case 'btnVideo':
@@ -114,6 +113,7 @@
                     column2.appendChild(img);
                     row.appendChild(column1);
                     row.appendChild(column2);
+                    panel.appendChild(heading);
                     panel.appendChild(row);
                     document.getElementById('elements').appendChild(panel);
                     document.getElementById('tablinks').appendChild(btn);
