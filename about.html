@@ -7,176 +7,171 @@
     <link rel="stylesheet" href="style.css" />
     <title>About - Phoner</title>
     <link rel="icon" href="assets/thumbnail.png" type="image/png" />
+    <script src="about.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
 </head>
 
 <body>
-    <nav>
-        <a href="home.html" title="Home" aria-label="Home">Home</a>
-        <a href="articles.html" title="Articles" aria-label="Articles">Articles</a>
-        <a href="specs.html" title="Specs" aria-label="Specs">Specs</a>
-        <a href="about.html" title="About" class="active" aria-label="About">About</a>
-        <a href="feedback.html" title="Feedback" aria-label="Feedback">Feedback</a>
-    </nav>
-    <header class="defaultHeader">
-        <h1>About</h1>
-        <p>Phoner was made possible by Surriya, Jaiganesh and Siddharth SK.</p>
-    </header>
-    <div class="content">
-        <div class="row">
-            <section>
-                <h1>Version info</h1>
-                <div class="card">
-                    <div class="row">
-                        <section>
-                            <img src="assets/logonew.png" style="width: 100%" alt="Phoner Logo" />
-                        </section>
-                        <section>
-                            <p id="serviceVersion"></p>
-                            <p>© 2020 JUV Studios. All rights reserved.</p>
-                            <p>Hosted on <a target="_blank" rel="noopener noreferrer"
-                                    href="https://pages.github.com/">GitHub Pages</a>.</p>
-                            <a target="_blank" rel="noopener noreferrer"
-                                href="https://github.com/phonerapp/phonerapp.github.io">GitHub repository</a><br>
-                            <a target="_blank" rel="noopener noreferrer"
-                                href="https://sites.google.com/site/jgveedu/legal">JUV
-                                Studios Terms of
-                                Use</a><br>
-                            <a target="_blank" rel="noopener noreferrer"
-                                href="https://www.youtube.com/channel/UCCgDUPx_XgBfgBx-If1uk1g">Subscribe to our
-                                YouTube channel</a>
-                        </section>
-                    </div>
-                </div>
-                <h1>Dependencies and references</h1>
-                <div class="card" id="referencesCard">
-                </div>
-            </section>
-            <section>
-                <h1>Meet the team</h1>
-                <div class="card centeredDiv">
-                    <div class="row">
-                        <section>
-                            <img alt="Jaiganesh" src="assets/jg.jpg" class="person">
-                            <h2>Jaiganesh Kumaran</h2>
-                            <p class="ms-fontSize-20">Designer</p>
-                        </section>
-                        <section>
-                            <p>I'm Jaiganesh. I study in HLC Class 7. I'm a tech
-                                enthusiast, a Veena player and a YouTuber. I have a YouTube channel called <b>"<a
-                                        href="https://www.youtube.com/channel/UCCgDUPx_XgBfgBx-If1uk1g">Jaiganesh Useful
-                                        Videos</a>"</b>. I am the one who designed this website and made the feedback
-                                form. I’m
-                                really grateful to Uma aunty too for giving this project and unleashing my creativity.
-                            </p>
-                            <p>Email: <a href="mailto:jaiganesh.kumaran@outlook.com">jaiganesh.kumaran@outlook.com</a>,
-                                <a href="mailto:juvstudios.2018@gmail.com">juvstudios.2018@gmail.com</a>, <a
-                                    href="mailto:jaiganesh_student@headstartschool.org">jaiganesh_student@headstartschool.org</a>
-                            </p>
-                        </section>
-                    </div>
-                </div>
-                <div class="card centeredDiv">
-                    <div class="row">
-                        <section>
-                            <img src="assets/surriyap.jpg" class="person" alt="Surriya" />
-                            <h2>Suriyaa Sivakumar</h2>
-                            <p class="ms-fontSize-20">Senior Editor</p>
-                        </section>
-                        <section>
-                            <p>I'm Suriyaa. I study in HLC Class 7. I like to play
-                                outdoor
-                                games. My favourite outdoor sport is Football. In Football, I am one of the best
-                                defenders in my
-                                class.
-                                I am really good in taking long shorts. The subject I really like to study is Chemistry
-                                and
-                                Computer
-                                Science. I like to study Chemistry because it’s easy and you just need to understand and
-                                study it.
-                                I
-                                like Computer Science because it’s fun to learn different ways of programming.</p>
-                            <p>Email: <a href="mailto:suriyaas2007@gmail.com">suriyaas2007@gmail.com</a>,
-                                <a
-                                    href="mailto:surriya_student@headstartschool.org">surriya_student@headstartschool.org</a>
-                            </p>
-                    </div>
-                </div>
-
-                <div class="card centeredDiv">
-                    <div class="row">
-                        <section>
-                            <img src="assets/siddh.jpg" alt="SK" class="person">
-                            <h2>Siddharth SK</h2>
-                            <p class="ms-fontSize-20">Founder</p>
-                        </section>
-                        <section>
-                            <p>I'm Siddharth. I’m 12 years old. I’m a
-                                7th
-                                grader.
-                                I study in HLC international school. I love to play football, play video games and boy I
-                                love
-                                music.
-                                I play the instruments keyboard and violin. I’m one of the designers of this fabulous
-                                website.
-                                I was the one who decided the topic of this website (mobile phones).
-                                I’m actually not much of a programmer to be honest. But, I gave the whole structure and
-                                functions of
-                                the website and asked
-                                my
-                                friends
-                                Suriyaa and Jaiganesh to program it for me.
-                                I even programmed some of the functions and Jaiganesh helped me. I’m really grateful to
-                                Uma aunty
-                                too
-                                for
-                                giving this project and unleashing my creativity.</p>
-                            <p>Email: <a href="mailto:siddharth46cool@gmail.com">siddharth46cool@gmail.com</a>,
-                                <a
-                                    href="mailto:siddharth_k_student@headstartschool.org">siddharth_k_student@headstartschool.org</a>
-                            </p>
-                        </section>
-                    </div>
-                </div>
-            </section>
+    <div class="busy-loader" id="loader">
+        <div class="w-ball-wrapper ball-1">
+            <div class="w-ball"></div>
+        </div>
+        <div class="w-ball-wrapper ball-2">
+            <div class="w-ball"></div>
+        </div>
+        <div class="w-ball-wrapper ball-3">
+            <div class="w-ball"></div>
+        </div>
+        <div class="w-ball-wrapper ball-4">
+            <div class="w-ball"></div>
+        </div>
+        <div class="w-ball-wrapper ball-5">
+            <div class=" w-ball"></div>
         </div>
     </div>
-    <script>
-        window.onload = function () {
-            // Your web app's Firebase configuration
-            const firebaseConfig = {
-                apiKey: "AIzaSyDpgnVb5MmOsLxX3BiEwtuk8sn-ClWwtYY",
-                authDomain: "phoner-db69a.firebaseapp.com",
-                databaseURL: "https://phoner-db69a.firebaseio.com",
-                projectId: "phoner-db69a",
-                storageBucket: "phoner-db69a.appspot.com",
-                messagingSenderId: "744614912602",
-                appId: "1:744614912602:web:50f5d6168f0e2654d6ee63",
-                measurementId: "G-B6LYDPH7X0"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            const database = firebase.firestore();
-            const collection = database.collection("ServiceInfo");
-            let versionInfo = collection.doc("BQ6UuFt4J22dvxD0jZFH");
-            versionInfo.get().then(function (doc) {
-                document.getElementById('serviceVersion').innerHTML = `Version ${doc.data()['Version'].toString()}`;
-            });
+    <div id="elements" style="display: none;">
+        <nav>
+            <a href="home.html" title="Home" aria-label="Home">Home</a>
+            <a href="articles.html" title="Articles" aria-label="Articles">Articles</a>
+            <a href="specs.html" title="Specs" aria-label="Specs">Specs</a>
+            <a href="about.html" title="About" class="active" aria-label="About">About</a>
+            <a href="feedback.html" title="Feedback" aria-label="Feedback">Feedback</a>
+        </nav>
+        <header class="defaultHeader">
+            <h1>About</h1>
+            <p>Phoner was made possible by Surriya, Jaiganesh and Siddharth SK.</p>
+        </header>
+        <div class="content">
+            <div class="row">
+                <section>
+                    <h1>Version info</h1>
+                    <div class="card">
+                        <div class="row">
+                            <section>
+                                <img src="assets/logonew.png" style="width: 100%" alt="Phoner Logo" />
+                            </section>
+                            <section>
+                                <p id="serviceVersion"></p>
+                                <p>© 2020 JUV Studios. All rights reserved.</p>
+                                <p>Hosted on <a target="_blank" rel="noopener noreferrer"
+                                        href="https://pages.github.com/">GitHub Pages</a>.</p>
+                                <a target="_blank" rel="noopener noreferrer"
+                                    href="https://github.com/phonerapp/phonerapp.github.io">GitHub repository</a><br>
+                                <a target="_blank" rel="noopener noreferrer"
+                                    href="https://sites.google.com/site/jgveedu/legal">JUV
+                                    Studios Terms of
+                                    Use</a><br>
+                                <a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.youtube.com/channel/UCCgDUPx_XgBfgBx-If1uk1g">Subscribe to our
+                                    YouTube channel</a>
+                            </section>
+                        </div>
+                    </div>
+                    <h1>Dependencies and references</h1>
+                    <div class="card" id="referencesCard">
+                    </div>
+                </section>
+                <section>
+                    <h1>Meet the team</h1>
+                    <div class="card centeredDiv">
+                        <div class="row">
+                            <section>
+                                <img alt="Jaiganesh" src="assets/jg.jpg" class="person">
+                                <h2>Jaiganesh Kumaran</h2>
+                                <p class="ms-fontSize-20">Designer</p>
+                            </section>
+                            <section>
+                                <p>I'm Jaiganesh. I study in HLC Class 7. I'm a tech
+                                    enthusiast, a Veena player and a YouTuber. I have a YouTube channel called <b>"<a
+                                            href="https://www.youtube.com/channel/UCCgDUPx_XgBfgBx-If1uk1g">Jaiganesh
+                                            Useful
+                                            Videos</a>"</b>. I am the one who designed this website and made the
+                                    feedback
+                                    form. I’m
+                                    really grateful to Uma aunty too for giving this project and unleashing my
+                                    creativity.
+                                </p>
+                                <p>Email: <a
+                                        href="mailto:jaiganesh.kumaran@outlook.com">jaiganesh.kumaran@outlook.com</a>,
+                                    <a href="mailto:juvstudios.2018@gmail.com">juvstudios.2018@gmail.com</a>, <a
+                                        href="mailto:jaiganesh_student@headstartschool.org">jaiganesh_student@headstartschool.org</a>
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="card centeredDiv">
+                        <div class="row">
+                            <section>
+                                <img src="assets/surriyap.jpg" class="person" alt="Surriya" />
+                                <h2>Suriyaa Sivakumar</h2>
+                                <p class="ms-fontSize-20">Senior Editor</p>
+                            </section>
+                            <section>
+                                <p>I'm Suriyaa. I study in HLC Class 7. I like to play
+                                    outdoor
+                                    games. My favourite outdoor sport is Football. In Football, I am one of the best
+                                    defenders in my
+                                    class.
+                                    I am really good in taking long shorts. The subject I really like to study is
+                                    Chemistry
+                                    and
+                                    Computer
+                                    Science. I like to study Chemistry because it’s easy and you just need to understand
+                                    and
+                                    study it.
+                                    I
+                                    like Computer Science because it’s fun to learn different ways of programming.</p>
+                                <p>Email: <a href="mailto:suriyaas2007@gmail.com">suriyaas2007@gmail.com</a>,
+                                    <a
+                                        href="mailto:surriya_student@headstartschool.org">surriya_student@headstartschool.org</a>
+                                </p>
+                        </div>
+                    </div>
 
-            let referencesInfo = collection.doc("References");
-            referencesInfo.get().then(function (doc) {
-                let list = document.createElement('ul');
-                const fields = doc.data();
-                for (const key of Object.keys(doc.data())) {
-                    let referenceItem = document.createElement('li');
-                    referenceItem.innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${fields[key]}">${key}</a>`;
-                    list.appendChild(referenceItem);
-                }
-                document.getElementById('referencesCard').appendChild(list);
-            });
-        }
-    </script>
+                    <div class="card centeredDiv">
+                        <div class="row">
+                            <section>
+                                <img src="assets/siddh.jpg" alt="SK" class="person">
+                                <h2>Siddharth SK</h2>
+                                <p class="ms-fontSize-20">Founder</p>
+                            </section>
+                            <section>
+                                <p>I'm Siddharth. I’m 12 years old. I’m a
+                                    7th
+                                    grader.
+                                    I study in HLC international school. I love to play football, play video games and
+                                    boy I
+                                    love
+                                    music.
+                                    I play the instruments keyboard and violin. I’m one of the designers of this
+                                    fabulous
+                                    website.
+                                    I was the one who decided the topic of this website (mobile phones).
+                                    I’m actually not much of a programmer to be honest. But, I gave the whole structure
+                                    and
+                                    functions of
+                                    the website and asked
+                                    my
+                                    friends
+                                    Suriyaa and Jaiganesh to program it for me.
+                                    I even programmed some of the functions and Jaiganesh helped me. I’m really grateful
+                                    to
+                                    Uma aunty
+                                    too
+                                    for
+                                    giving this project and unleashing my creativity.</p>
+                                <p>Email: <a href="mailto:siddharth46cool@gmail.com">siddharth46cool@gmail.com</a>,
+                                    <a
+                                        href="mailto:siddharth_k_student@headstartschool.org">siddharth_k_student@headstartschool.org</a>
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
