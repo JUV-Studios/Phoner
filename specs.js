@@ -154,7 +154,7 @@ function createVideoButton(link) {
     videoBtn.title = "Watch promo video";
     videoBtn.setAttribute('aria-label', 'Promo video');
     videoBtn.onclick = function () {
-        launchUri(link);
+        window.open(link);;
     }
     videoBtn.innerHTML = '<i class="ms-Icon ms-Icon--Video" aria-hidden="true"></i> Promo Video';
     return videoBtn;
@@ -166,7 +166,7 @@ function createBuyButton(link) {
     buyBtn.title = "Buy";
     buyBtn.setAttribute('aria-label', buyBtn.title);
     buyBtn.onclick = function () {
-        launchUri(link);
+        window.open(link);;
     }
     buyBtn.innerHTML = '<i class="ms-Icon ms-Icon--Shop" aria-hidden="true"></i> Buy';
     return buyBtn;
@@ -178,7 +178,7 @@ function createReviewsButton(link) {
     reviewBtn.title = "Reviews";
     reviewBtn.setAttribute('aria-label', reviewBtn.title);
     reviewBtn.onclick = function () {
-        launchUri(link);
+        window.open(link);;
     }
     reviewBtn.innerHTML = '<i class="ms-Icon ms-Icon--FavoriteList" aria-hidden="true"></i> Reviews';
     return reviewBtn;

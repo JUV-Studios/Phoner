@@ -60,10 +60,6 @@ function loadSearch() {
     }
 }
 
-function launchUri(uri) {
-    window.open(uri);
-}
-
 function changeSeperatorState() {
     if (window.innerWidth <= 800) {
         document.getElementById("Seperator").className = "horizontalSeperator";
