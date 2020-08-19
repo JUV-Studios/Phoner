@@ -51,13 +51,14 @@
 		    <a href="about.html" title="About" aria-label="About">About</a>
 		    <a href="feedback.html" title="Feedback" aria-label="Feedback">Feedback</a>
 		  </nav>
-		<iframe src="https://sway.office.com/s/DUOTWdDC32CcU4H5/embed" title="Intro" allowfullscreen mozallowfullscreen msallowfullscreen webkitallowfullscreen onload="onLoad()"></iframe>
+		<iframe src="https://sway.office.com/s/DUOTWdDC32CcU4H5/embed" title="Intro" onload="onLoad()"></iframe>
 	</div>
 	<script>
 		function onLoad()
 		{
 			document.getElementById('loader').style.display = "none";
 			document.getElementById('content').style.display = "block";
+			document.getElementById('content').style.scrollBehavior = "initial";
 		}
 	</script>
 </body>
