@@ -8,9 +8,6 @@ We welcome contributions to improve our services. To get started, create a fork 
 - Any device with an internet conection
 - Any text editor
 
-**Recommended requirements**
-- [Visual Studio Code](https://code.visualstudio.com) with [webhint](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint)
-
 # Contacting us
 Please contact [Jaiganesh](https://github.com/Jaiganeshkumaran) for any clarifications or help.
 
