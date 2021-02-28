@@ -14,4 +14,4 @@ Please contact [Jaiganesh](https://github.com/Jaiganeshkumaran) for any clarific
 By using our service, you agree to [JUV Studios terms of use](https://sites.google.com/site/jgveedu/legal).
 
 # License
-This project is licensed under GPL 3. Be sure to read the license before contributing or forking. This license doesn't apply for our database.
+This project is licensed under GPL 3. Be sure to read the license before contributing or forking. This license doesn't apply for our database. You may use our database if you are only reading content.
